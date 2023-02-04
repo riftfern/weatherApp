@@ -1,6 +1,6 @@
 const list = document.querySelector('api-section .cities')
-const weatherApp = async () => {
-    const response = await fetch(API_URL);
+const weatherApp = async (url) => {
+    const response = await fetch(url);
     const WEATHER_DATA = await response.json();
 
     const {main, name, sys, weather} = WEATHER_DATA;
@@ -24,5 +24,5 @@ const weatherApp = async () => {
 
     list.innerHTML = markup;
     list.appendChild(li);
-
 }
+
