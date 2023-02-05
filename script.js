@@ -40,7 +40,7 @@ const weatherApp = async (url) => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const listItems = list.querySelectorAll('.ajax-section .city');
+  const listItems = list.querySelectorAll('.api-section .city');
   let inputVal = input.value;
   const listItemsArray = Array.from(listItems);
   if (listItemsArray.length > 0) {
