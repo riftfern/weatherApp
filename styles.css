@@ -1,0 +1,38 @@
+:root{
+    --bg_main: #42b883;
+    --text_light: #ff7e67;
+    --text_med: #347474;
+    --text_dark: #347474;
+    --red: #ff1e42;
+    --darkred: #c3112d;
+    --orange: #ff8c00;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+button{
+    cursor: pointer;
+    transition: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+button, input{
+    border: none;
+    background:none;
+    outline: none;
+    height: auto;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ul{
+    list-style: none;
+}
+body{
+    font: 1rem/1.3 "Lekton", sans-serif;
+    background-color: var(--bg_main);
+}
