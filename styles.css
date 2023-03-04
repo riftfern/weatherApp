@@ -14,6 +14,61 @@
     box-sizing: border-box;
     font-weight: normal;
 }
+.top-banner{
+    color: var(--text_dark);
+}
+.top-banner form{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.top-banner form input{
+    font-size: 2rem;
+    height: 40px;
+    padding: 5px 5px 10px;
+    border-bottom: 1px solid;
+}
+.top-banner form button{
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: .1em;
+    padding: 15px 20px;
+    margin-left:15px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: aliceblue;
+}
+.top-banner form button:hover{
+    opacity: .5;
+}
+.top-banner form .msg{
+    position: absolute;
+    bottom: -40px;
+    left:0;
+    max-width: 450px;
+    min-height: 450px;
+}
+@media screen and (max-width: 700px) {
+    .top-banner form {
+      flex-direction: column;
+    }
+    
+    .top-banner form input,
+    .top-banner form button {
+      width: 100%;
+    }
+    .top-banner form button {
+      margin: 20px 0 0 0;
+    }
+    
+    .top-banner form .msg {
+      position: static;
+      max-width: none;
+      min-height: 0;
+      margin-top: 10px;
+    }
+  }
 button{
     cursor: pointer;
     transition: cubic-bezier(0.95, 0.05, 0.795, 0.035);
@@ -43,6 +98,7 @@ body{
     font-weight: bold;
     font-size: 4rem;
     padding: 0 0 30px 0;
+    letter-spacing: .02em;
 }
 
 .api-section{
@@ -53,3 +109,62 @@ body{
     grid-gap: 32px 20px;
     grid-template-columns: repeat(4, 1fr);
 }
+@media screen and (max-width: 1000px) { 
+    .api-section .cities {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .api-section .cities {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 500px) {  
+    .api-section .cities {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .api-section .city {
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: var(--text_light);
+    color: var(--text_med);
+  }
+  .api-section .city::after {
+    content: ’’;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 20px;
+    background: var(--text_light);
+  }
+  .api-section figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .api-section .city-temp {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text_dark);
+  }
+  .api-section .city sup {
+    font-size: 0.5em;
+  }
+  .api-section .city-name sup {
+    padding: 0.2em 0.6em;
+    border-radius: 30px;
+    color: var(--text_dark);
+    background: var(--orange);
+  }
+  .api-section .city-icon {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+  }
